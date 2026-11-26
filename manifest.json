@@ -1,0 +1,10 @@
+{
+  "Name": "BundleBrain",
+  "Author": "sdvhead",
+  "Version": "1.0.0",
+  "Description": "Community Center Task Management.",
+  "UniqueID": "sdvhead.BundleBrain",
+  "EntryDll": "BundleBrain.dll",
+  "MinimumApiVersion": "4.5.2",
+  "UpdateKeys": []
+}

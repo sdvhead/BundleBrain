@@ -1,0 +1,40 @@
+﻿using StardewValley;
+using StardewValley.ItemTypeDefinitions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BundleBrain
+{
+    public class MenuData
+    {
+        public string HeaderText { get; set; } = "";
+        public List<ParsedItemData> Items { get; set; } = [];
+
+        public static MenuData Edibles()
+        {
+            int[] edibleCategories = [
+                StardewValley.Object.CookingCategory,
+            StardewValley.Object.EggCategory,
+            StardewValley.Object.FishCategory,
+            StardewValley.Object.FruitsCategory,
+            StardewValley.Object.meatCategory,
+            StardewValley.Object.MilkCategory,
+            StardewValley.Object.VegetableCategory,
+        ];
+            var items = ItemRegistry.ItemTypes
+                .Single(type => type.Identifier == ItemRegistry.type_object)
+                .GetAllIds()
+                .Select(id => ItemRegistry.GetDataOrErrorItem(id))
+                .Where(data => edibleCategories.Contains(data.Category))
+                .ToList();
+            return new()
+            {
+                HeaderText = "All Edibles",
+                Items = items,
+            };
+        }
+    }
+}

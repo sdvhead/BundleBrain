@@ -1,0 +1,10 @@
+{
+  "cfgEnableBundleBrain.Name": "Enable BundleBrain",
+  "cfgEnableBundleBrain.Description": "Enables/Disables the entire mod",
+  "cfgButtonOffsetX.Name": "Button Offset X",
+  "cfgButtonOffsetX.Description": "X position of the button",
+  "cfgButtonOffsetY.Name": "Button Offset Y",
+  "cfgButtonOffsetY.Description": "Y position of the button",
+  "cfgButtonDraggable.Name": "Button is draggable",
+  "cfgButtonDraggable.Description": "Makes the button draggable"
+}
